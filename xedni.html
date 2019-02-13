@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Minecraft Double Smooth Stone Slab</title>
+		<title>‮Minecraft Double Smooth Stone Slab‪</title>
 		<link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
 		<link rel="icon" type="image/png" href="/assets/favicon.png" />
 		<style>
@@ -15,7 +15,7 @@
 			.viewport {
 				width: 100vw;
 				height: 100vh;
-				perspective: 1100px;
+				perspective: -1100px;
 				perspective-origin: 50%;
 			}
 
@@ -36,7 +36,7 @@
 				background-image: url('/assets/stone_slab_side.png');
 				image-rendering: optimizeSpeed;
 				image-rendering: crisp-edges;
-				image-rendering: pixelated;
+				filter: invert(1);
 			}
 
 			.block>*:not(.grass) {
@@ -44,45 +44,47 @@
 				height: 128px;
 				left: calc(50% - 64px);
 				top: calc(50% - 64px);
-				background-color: grey;
 			}
 
 			.block>.grass {
 				width: 6400px;
 				height: 6400px;
 				left: calc(50% - 3200px);
-				top: calc(50% - 3200px);
-				background-color: forestgreen;
+				top: calc(50% - 1200px);
 				background-image: url('/assets/grass_block_top2.png');
 				transform: translate3D(2400px, 64px, -2400px) rotateX(-90deg);
 			}
 
 			.block>.front {
+				background-color: blue;
 				transform: translateZ(64px);
-				background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 1px), url('/assets/stone_slab_side.png');
 			}
 
 			.block>.back {
+				background-color: cyan;
 				transform: translateZ(-64px);
 			}
 
 			.block>.top {
+				background-color: red;
 				transform: translateY(-64px) rotateX(90deg) rotateZ(180deg);
 				background-image: url('/assets/stone_slab_top.png');
 			}
 
 			.block>.bottom {
+				background-color: orange;
 				transform: translateY(64px) rotateX(90deg);
 				background-image: url('/assets/stone_slab_top.png');
 			}
 
 			.block>.right {
+				background-color: green;
 				transform: translateX(64px) rotateY(90deg);
 			}
 
 			.block>.left {
+				background-color: lime;
 				transform: translateX(-64px) rotateY(-90deg);
-				background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 1px), url('/assets/stone_slab_side.png');
 			}
 
 			.overlay {
@@ -111,7 +113,7 @@
 		</style>
 	</head>
 	<body>
-		<!-- idea by sarene!, made by opl and obw or something -->
+		<!-- made by opl and obw or something -->
 		<div class="viewport">
 			<div class="block">
 				<div class="grass"></div>
@@ -124,8 +126,7 @@
 			</div>
 		</div>
 		<div class="overlay">
-			<a class="discord" href="https://discord.gg/XwTmRSd"></a>
-			<a href="/xedni.html" class="evil"></a>
+			
 		</div>
 	</body>
 </html>
