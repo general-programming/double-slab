@@ -1,0 +1,94 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+
+.viewport {
+	width: 100vw;
+	height: 100vh;
+	perspective: 1100px;
+	perspective-origin: 50%;
+}
+
+.viewport>* {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+}
+
+.block {
+	transform: rotateX(-34deg) rotateY(42deg);
+}
+
+.block>* {
+	position: absolute;
+	background-size: 128px;
+	background-image: url('/assets/stone_slab_side.png');
+	image-rendering: optimizeSpeed;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+
+.block>*:not(.grass) {
+	width: 128px;
+	height: 128px;
+	left: calc(50% - 64px);
+	top: calc(50% - 64px);
+	background-color: grey;
+}
+
+.block>.grass {
+	width: 6400px;
+	height: 6400px;
+	left: calc(50% - 3200px);
+	top: calc(50% - 3200px);
+	background-color: forestgreen;
+	background-image: url('/assets/grass_block_top2.png');
+	transform: translate3D(2400px, 64px, -2400px) rotateX(-90deg);
+}
+
+.block>.front {
+	transform: translateZ(64px);
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 1px), url('/assets/stone_slab_side.png');
+}
+
+.block>.back {
+	transform: translateZ(-64px);
+}
+
+.block>.top {
+	transform: translateY(-64px) rotateX(90deg) rotateZ(180deg);
+	background-image: url('/assets/stone_slab_top.png');
+}
+
+.block>.bottom {
+	transform: translateY(64px) rotateX(90deg);
+	background-image: url('/assets/stone_slab_top.png');
+}
+
+.block>.right {
+	transform: translateX(64px) rotateY(90deg);
+}
+
+.block>.left {
+	transform: translateX(-64px) rotateY(-90deg);
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 1px), url('/assets/stone_slab_side.png');
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 4;
+}
+
+.discord {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
