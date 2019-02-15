@@ -21,6 +21,7 @@ body {
 
 .block {
 	transform: rotateX(-34deg) rotateY(42deg);
+	will-change: transform;
 }
 
 .block>* {
