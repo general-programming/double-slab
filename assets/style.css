@@ -66,8 +66,8 @@ body {
 }
 
 .block>.bottom {
-	transform: translateY(64px) rotateX(90deg);
-	background-image: url('/assets/stone_slab_top.png');
+	transform: translateY(63px) rotateX(90deg);
+	background-image: url('/assets/dirt.png');
 }
 
 .block>.right {
