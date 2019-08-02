@@ -3,6 +3,11 @@ body {
 	height: 100vh;
 	margin: 0;
 	overflow: hidden;
+	background: #8cb2ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #8cb2ff 0%, #8cb2ff 39%, #b8d2ff 61%, #b8d2ff 79%);
+	background: -webkit-linear-gradient(top,  #8cb2ff 0%,#8cb2ff 39%,#b8d2ff 61%,#b8d2ff 79%);
+	background: linear-gradient(to bottom,  #8cb2ff 0%,#8cb2ff 39%,#b8d2ff 61%,#b8d2ff 79%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cb2ff', endColorstr='#b8d2ff',GradientType=0 );
 }
 
 .viewport {
@@ -27,7 +32,7 @@ body {
 .block>* {
 	position: absolute;
 	background-size: 128px;
-	background-image: url('/assets/stone_slab_side.png');
+	background-image: url('stone_slab_side.png');
 	image-rendering: optimizeSpeed;
 	image-rendering: crisp-edges;
 	image-rendering: pixelated;
@@ -47,13 +52,13 @@ body {
 	left: calc(50% - 3200px);
 	top: calc(50% - 3200px);
 	background-color: forestgreen;
-	background-image: url('/assets/grass_block_top2.png');
+	background-image: url('grass_block_top2.png');
 	transform: translate3D(2400px, 64px, -2400px) rotateX(-90deg);
 }
 
 .block>.front {
 	transform: translateZ(64px);
-	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 1px), url('/assets/stone_slab_side.png');
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 1px), url('stone_slab_side.png');
 }
 
 .block>.back {
@@ -62,12 +67,12 @@ body {
 
 .block>.top {
 	transform: translateY(-64px) rotateX(90deg) rotateZ(180deg);
-	background-image: url('/assets/stone_slab_top.png');
+	background-image: url('stone_slab_top.png');
 }
 
 .block>.bottom {
 	transform: translateY(64px) rotateX(90deg);
-	background-image: url('/assets/stone_slab_top.png');
+	background-image: url('stone_slab_top.png');
 }
 
 .block>.right {
@@ -76,7 +81,7 @@ body {
 
 .block>.left {
 	transform: translateX(-64px) rotateY(-90deg);
-	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 1px), url('/assets/stone_slab_side.png');
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 1px), url('stone_slab_side.png');
 }
 
 .overlay {
