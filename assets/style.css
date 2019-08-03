@@ -3,6 +3,11 @@ body {
 	height: 100vh;
 	margin: 0;
 	overflow: hidden;
+	background: #8cb2ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #8cb2ff 0%, #8cb2ff 39%, #b8d2ff 61%, #b8d2ff 79%);
+	background: -webkit-linear-gradient(top,  #8cb2ff 0%,#8cb2ff 39%,#b8d2ff 61%,#b8d2ff 79%);
+	background: linear-gradient(to bottom,  #8cb2ff 0%,#8cb2ff 39%,#b8d2ff 61%,#b8d2ff 79%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cb2ff', endColorstr='#b8d2ff',GradientType=0 );
 }
 
 .viewport {
